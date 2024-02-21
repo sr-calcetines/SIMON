@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Juego de Simon</title>
+    <audio id="sound-red" src="sounds/1.mp3"></audio>
+    <audio id="sound-green" src="sounds/2.mp3"></audio>
+    <audio id="sound-blue" src="sounds/3.mp3"></audio>
+    <audio id="sound-yellow" src="sounds/4.mp3"></audio>
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>Juego de Simon</h1>
+        <button id="start-btn">Iniciar Juego</button>
+        <button id="scores-btn">Ver Puntuaciones</button><br>
+        <label for="speed">Velocidad:</label><br>
+        <input type="range" id="speed" min="1" max="5" value="3">
+        <div id="game-board"></div>
+    </div>
+
+    <div id="scores-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeScoresModal()">&times;</span>
+            <h2>Leaderboard</h2>
+            <table id="scores-table">
+                <tr>
+                    <th>Player</th>
+                    <th>Score</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="authors">
+        <p>José Ignacio Gavilán Sánchez</p>
+        <p>Ignacio Pérez Valles</p> 
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
